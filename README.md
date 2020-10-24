@@ -12,7 +12,7 @@
 
 ## 快速使用
 ### 服务器部署
-开放服务器的 8079 端口
+开放服务器的 8078 端口
 
 将 [Contact-Server.jar](Contact-Server/out/artifacts/Contact_Server/Contact-Server.jar) 下载到你的服务器上
 
