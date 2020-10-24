@@ -25,6 +25,7 @@ class ContactModel: ObservableObject {
         if let ip = UserDefaults.standard.string(forKey: "data-ip") {
             ContactInfo.IP = ip
         }
+        update()
     }
     
     var IP: String {
@@ -32,6 +33,7 @@ class ContactModel: ObservableObject {
     }
     
     func update() {
+        contacts = []
         ContactInfo.fetch { contacts in
             self.contacts = contacts
         }

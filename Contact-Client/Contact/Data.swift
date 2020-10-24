@@ -20,7 +20,7 @@ struct ContactInfo: Identifiable {
     private static func connect(withCmd cmd: String, handler: @escaping (Socket) throws -> Void) {
         let socket = try! Socket.create()
         do {
-            try socket.connect(to: IP, port: PORT)
+            try socket.connect(to: IP, port: PORT, timeout: 1000)
             try socket.println(cmd)
             try handler(socket)
         } catch _ { }
